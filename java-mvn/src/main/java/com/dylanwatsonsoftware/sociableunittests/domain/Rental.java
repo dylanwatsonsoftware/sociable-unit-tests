@@ -8,7 +8,7 @@ public class Rental {
   private int daysRented;
 
   public double getCharge() {
-    return movie.getCharge(daysRented)
+    return movie.getCharge(daysRented);
   }
 
   public int getPoints() {
