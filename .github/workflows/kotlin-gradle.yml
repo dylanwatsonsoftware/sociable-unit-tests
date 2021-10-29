@@ -1,4 +1,4 @@
-name: Kotlin Maven CI
+name: Kotlin Gradle CI
 
 on: [push]
 
