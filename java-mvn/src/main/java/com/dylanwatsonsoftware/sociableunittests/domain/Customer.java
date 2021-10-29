@@ -1,6 +1,6 @@
 package com.dylanwatsonsoftware.sociableunittests;
 
-import java.util.List;
+import java.util.*;
 import lombok.Data;
 
 @Data
