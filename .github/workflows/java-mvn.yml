@@ -16,11 +16,9 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
-          distribution: 'adopt'
+          java-version: "11"
+          distribution: "adopt"
       - name: Maven compile
-        run: mvn compile
-      - name: Maven Test
-        run: mvn test        
+        run: mvn --batch-mode compile
       - name: Maven Verify
-        run: mvn verify        
+        run: mvn --batch-mode verify

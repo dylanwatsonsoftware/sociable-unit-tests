@@ -18,5 +18,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Maven compile
+        run: mvn --batch-mode compile
       - name: Maven Verify
-        run: mvn verify
+        run: mvn --batch-mode verify
