@@ -1,1 +1,1 @@
-rootProject.name = "sociable-unit-tests"
+rootProject.name = "sociable-unit-tests-kotlin-gradle"
