@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociableunittests;
+package com.dylanwatsonsoftware.sociableunittests.domain;
 
 import lombok.Data;
 
@@ -7,8 +7,7 @@ public class Movie {
     public enum Type {
         REGULAR,
         NEW_RELEASE,
-        CHILDREN,
-        UNKNOWN;
+        CHILDREN
     }
 
     private String title;
@@ -33,48 +32,8 @@ public class Movie {
     public double getCharge(int daysRented) {
         return price.getCharge(daysRented);
     }
+
     public int getPoints(int daysRented) {
         return price.getPoints(daysRented);
-    }
-}
-
-abstract class Price {
-    abstract double getCharge(int daysRented);
-    int getPoints(int daysRented) {
-        return 1;
-    }
-}
-
-class ChildrensPrice extends Price {
-  
-    @Override
-    double getCharge(int daysRented) {
-        double amount = 1.5;
-        if (daysRented > 3) amount += (daysRented - 3) * 1.5;
-        return amount;
-    }
-}
-
-class RegularPrice extends Price {
-
-    @Override
-    public double getCharge(int daysRented) {
-        double amount = 2;
-        if (daysRented > 2) amount += (daysRented - 2) * 1.5;
-        return amount;
-    }
-}
-
-class NewReleasePrice extends Price {
-
-    @Override
-    public double getCharge(int daysRented) {
-        return daysRented * 3;
-    }
-
-    @Override
-    int getPoints(int daysRented) {
-        if (daysRented > 1) return 2;
-        return 1;
     }
 }
