@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 
 
 @Controller
-@Path("/rentals")
+@Path("/")
 public class RentalController {
 
     @GET
