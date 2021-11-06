@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociableunittests.domain;
+package com.dylanwatsonsoftware.sociable.domain;
 
 public class RegularPrice extends Price {
 
