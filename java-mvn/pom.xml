@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dylanwatsonsoftware</groupId>
-	<artifactId>sociable-unit-tests-java</artifactId>
+	<artifactId>java-mvn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sociable-unit-tests-java</name>
 	<description>Demo of Sociable Unit Tests in Spring Boot</description>
