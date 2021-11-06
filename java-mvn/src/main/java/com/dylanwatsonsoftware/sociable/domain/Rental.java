@@ -4,8 +4,11 @@ import lombok.Data;
 
 @Data
 public class Rental {
+    String id;
+
     Movie movie;
-    private int daysRented;
+
+    int daysRented;
 
     public double getCharge() {
         return movie.getCharge(daysRented);

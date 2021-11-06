@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 public class Customer {
-    private String name;
-    private List<Rental> rentals = new ArrayList<>();
+    String id;
+    String name;
+    List<Rental> rentals = new ArrayList<>();
 }
