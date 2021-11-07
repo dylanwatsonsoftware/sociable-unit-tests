@@ -3,21 +3,19 @@ package com.dylanwatsonsoftware.sociable.api;
 import com.dylanwatsonsoftware.sociable.domain.Rental;
 import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-
-@Controller
+@RestController
 public class RentalController {
 
-    @GET
-    @Path("/")
+    @GetMapping("/")
     public Rental rental() {
         return new Rental();
     }
 
-    @GET
-    @Path("/greeting")
+    @GetMapping("/greeting")
     public String greeting() {
         return "Hello, World";
     }
