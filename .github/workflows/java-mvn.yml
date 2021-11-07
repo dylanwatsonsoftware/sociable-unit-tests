@@ -29,3 +29,10 @@ jobs:
         with:
           files: java-mvn/target/**/*.xml
 
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: JUnit Tests
+          path: java-mvn/target/**/*.xml
+          reporter: java-junit
