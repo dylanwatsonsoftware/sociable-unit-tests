@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociable;
+package com.dylanwatsonsoftware.sociable.api;
 
 import org.junit.jupiter.api.Test;
 
