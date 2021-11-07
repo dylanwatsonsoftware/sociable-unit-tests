@@ -1,6 +1,6 @@
 name: Kotlin Maven CI
 
-on: [push]
+#on: [push]
 
 defaults:
   run:
