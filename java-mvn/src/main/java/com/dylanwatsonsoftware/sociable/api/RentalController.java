@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@AllArgsConstructor
 @RestController
+@AllArgsConstructor
 public class RentalController {
 
     private final RentalService rentalService;
@@ -30,3 +30,5 @@ public class RentalController {
     }
 
 }
+
+
