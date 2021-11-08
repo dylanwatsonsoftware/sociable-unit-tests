@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociable.api;
+package com.dylanwatsonsoftware.sociable;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,18 +1,27 @@
 package com.dylanwatsonsoftware.sociable.api;
 
 import com.dylanwatsonsoftware.sociable.domain.Rental;
-import org.springframework.stereotype.Controller;
-
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
+@AllArgsConstructor
 @RestController
 public class RentalController {
 
+    private final RentalService rentalService;
+
     @GetMapping("/")
-    public Rental rental() {
-        return new Rental();
+    public List<Rental> rentals() {
+        return rentalService.rentals();
+    }
+
+    @GetMapping("/:id")
+    public Rental rental(@PathVariable String id) {
+        return rentalService.rental(id);
     }
 
     @GetMapping("/greeting")
