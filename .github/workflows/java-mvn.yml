@@ -24,7 +24,7 @@ jobs:
         run: mvn --batch-mode verify
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
+        uses: dylanwatsonsoftware/test-reporter@v1
         if: always()
         with:
           name: JUnit Tests
