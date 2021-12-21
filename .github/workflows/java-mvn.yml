@@ -21,6 +21,15 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
+          cache: ${{ matrix.java }}
 
       - name: Maven Verify
         run: mvn --batch-mode verify
+
+      - name: Test Report
+        uses: dylanwatsonsoftware/test-reporter@v1
+        if: always()
+        with:
+          name: JUnit Tests
+          path: java-mvn/target/**/*.xml
+          reporter: java-junit
