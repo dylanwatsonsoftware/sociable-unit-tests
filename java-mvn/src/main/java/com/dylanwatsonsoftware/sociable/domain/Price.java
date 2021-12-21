@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociableunittests.domain;
+package com.dylanwatsonsoftware.sociable.domain;
 
 public abstract class Price {
     public abstract double getCharge(int daysRented);

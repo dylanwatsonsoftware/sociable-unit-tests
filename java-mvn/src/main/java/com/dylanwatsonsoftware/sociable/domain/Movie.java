@@ -1,16 +1,11 @@
-package com.dylanwatsonsoftware.sociableunittests.domain;
+package com.dylanwatsonsoftware.sociable.domain;
 
 import lombok.Data;
 
 @Data
 public class Movie {
-    public enum Type {
-        REGULAR,
-        NEW_RELEASE,
-        CHILDREN
-    }
-
-    private String title;
+    String id;
+    String title;
     Price price;
 
     private void setPriceCode(Movie.Type priceCode) {
@@ -35,5 +30,11 @@ public class Movie {
 
     public int getPoints(int daysRented) {
         return price.getPoints(daysRented);
+    }
+
+    public enum Type {
+        REGULAR,
+        NEW_RELEASE,
+        CHILDREN
     }
 }
