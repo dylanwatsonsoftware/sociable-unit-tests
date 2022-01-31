@@ -1,11 +1,17 @@
 package com.dylanwatsonsoftware.sociable.domain;
 
+import com.dylanwatsonsoftware.sociable.domain.price.ChildrensPrice;
+import com.dylanwatsonsoftware.sociable.domain.price.NewReleasePrice;
+import com.dylanwatsonsoftware.sociable.domain.price.Price;
+import com.dylanwatsonsoftware.sociable.domain.price.RegularPrice;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Movie {
-    String id;
-    String title;
+    final String id;
+    final String title;
     Price price;
 
     private void setPriceCode(Movie.Type priceCode) {

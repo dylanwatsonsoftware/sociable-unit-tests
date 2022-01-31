@@ -1,4 +1,4 @@
-package com.dylanwatsonsoftware.sociable.domain;
+package com.dylanwatsonsoftware.sociable.domain.price;
 
 public class NewReleasePrice extends Price {
 

@@ -1,10 +1,12 @@
 package com.dylanwatsonsoftware.sociable.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(fluent = true, chain = true)
+@AllArgsConstructor
 public class Rental {
     String id;
 
