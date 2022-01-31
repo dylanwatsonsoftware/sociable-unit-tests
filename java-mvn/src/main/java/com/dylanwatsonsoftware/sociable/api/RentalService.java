@@ -19,6 +19,6 @@ public class RentalService {
     }
 
     public Rental rental(String id) {
-        return rentalRepository.getById(id);
+        return rentalRepository.findById(id).orElseThrow();
     }
 }

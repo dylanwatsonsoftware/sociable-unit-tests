@@ -1,15 +1,12 @@
 package com.dylanwatsonsoftware.sociable.pricing;
 
+import com.mmnaseri.utils.spring.data.dsl.factory.RepositoryFactoryBuilder;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
-public class PricingTest {
+public class PricingWithRepoBuilderTest {
 
     PricingController pricingController(PricingRepository repo) {
         return new PricingController(
@@ -23,12 +20,12 @@ public class PricingTest {
 
     @Test
     public void testPricing() {
-        PricingRepository mockPricingRepo = mock(PricingRepository.class);
-        PricingController controller = pricingController(mockPricingRepo);
+        PricingRepository pricingRepo = RepositoryFactoryBuilder.builder().mock(PricingRepository.class);
+        PricingController controller = pricingController(pricingRepo);
 
         Price price = new Price("123", "Cake", 20, 5, 20.00, 10);
 
-        when(mockPricingRepo.findById("123")).thenReturn(Optional.of(price));
+        pricingRepo.save(price);
 
         assertThat(controller.calculatePrice("123", 1))
             .isCloseTo(24.00, within(0.02));
